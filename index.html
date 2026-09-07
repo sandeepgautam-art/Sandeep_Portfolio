@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Gautam — Data Analyst · Java &amp; Python Developer</title>
+<meta name="description" content="Portfolio of Sandeep Gautam — IT Engineer, Data Analyst, Java & Python programmer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-blob b1"></div>
+  <div class="bg-blob b2"></div>
+  <div class="bg-blob b3"></div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">sandeep<span class="accent">.</span>gautam<span class="brand-dot"></span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <a class="nav-cta" href="mailto:sandeep8108gautam@gmail.com">Hire me ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="top" style="border-top:none;">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="pulse-dot"></span> Final-year IT Engineer · Mumbai, India</div>
+        <h1 class="name">Sandeep<br><span class="grad">Gautam</span></h1>
+
+        <div class="role-cycle">
+          <span class="prompt-chevron">&gt;</span>
+          <span id="roleText"></span><span class="caret"></span>
+        </div>
+
+        <p class="hero-text">
+          I turn <strong>messy datasets into decisions</strong> — cleaning, analyzing and visualizing data with
+          Python and Power BI — and I <strong>ship the software</strong> around it in Java, Python and SQL.
+          Final-year B.E. IT student at Saraswati College of Engineering, currently interning as a
+          Data Analyst at CodeAlpha.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="mailto:sandeep8108gautam@gmail.com">✉ Get in touch</a>
+          <a class="btn btn-outline" href="https://github.com/sandeepgautam-art" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/sandeep-gautam-" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat">
+            <span class="num" data-count="5" data-suffix="">0</span>
+            <span class="lbl">PROJECTS SHIPPED</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-count="6.77" data-decimals="2">0</span>
+            <span class="lbl">LATEST SGPI · SEM VI</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-count="3" data-suffix="+">0</span>
+            <span class="lbl">CERTIFICATIONS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">sandeep@portfolio — zsh</span>
+        </div>
+        <div class="term-body" id="typedOutput"></div>
+        <div class="term-footer">
+          <div class="photo-chip">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA3ADcAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAADcAAAAAQAAANwAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAANygAwAEAAAAAQAAAPIAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIAPIA3AMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAEBAQEBAQIBAQICAgICAgMCAgICAwQDAwMDAwQFBAQEBAQEBQUFBQUFBQUGBgYGBgYHBwcHBwgICAgICAgICAj/2wBDAQEBAQICAgMCAgMIBQUFCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAj/3QAEAA7/2gAMAwEAAhEDEQA/AP7kQ+Vx2opi/dp+D1r589gMKcg9KZsXGKdRQAm2mMGIzz71KDzSdqAIAxHSlUqBk9ak2DrSlF24HX/P+etAEJIGCKSnbOMnr2pMGgAG0DGP8/nSUGkBJ6igCHBY5pd7Y4p+UPFIy8cdqAG7iwqBiCcdakHHFNK+gzmg3jW7kbZzzTCSKeRjg0hGRzSaujoTvsVmO0Zpo3k/N0qdl49arkEZx3rlqRs9RiAhWpCRuz+NCgE80NjPFS4ruAjPk5Y89qiY9RmpXTcN1Vyc9elDhbcCJm5OfwqOpGXHSo2UkYqAIt2Tk9M8U8gMckGosGo2ZlOP8/yoA//Q/uVCetOIyMUwMOpp49fXmvF5UewNwPu4/GoyMHBqUjI/Go2XcSKzlEBtFFHvUgFFIRmjHOaAFOPrTSAOMU8DJxX5e/8ABSD/AIKufs9/8E4fAd1r3xBeHU9Zh8mNNGW7W12zXQLW8bvsldpJFG/y443ZY/3kmyMhzcYNilJJXZ+nrr3FNCknFf57Ot/8Hl/7T2meJrqbR/hf8NtU0prtBa2gfV4LiK0ABbM7TbXlbJUsYgqsMhSvX5h/aK/4Ozf+CkHxp1rUJv2erXwt8NNG+yq0GmQQLquowrBGGnlN9cpGGZ2DEARLhcKASMnojhJGH1qJ/phGMCjbkED0r/Kvs/8Ag6c/4LCw6VY6a/jnw8z2abJLubw5YvLd4OQ07BQpbnBKKuQOmea/Rv8AZf8A+Dxv9pzwbqcWn/tefDjw/wCMtIIVX1Lwu50LVos9H2OJ7WZSOg2xknPzDpRLCSGsTA/0LmXBoPXiv52fgF/wdFf8EpPjabXT/E3iHXvAmpTw+ZNa+J9Lm+zwN/ca8hDRFs8DHXtmv3E+EH7QHwT/AGgfDsXiz4I+K9A8U6fPCs8c+jXkc7CNxlS8YPmJkf31BrnlTa3RrGaezPXyoqE4Bp4dSMfyNI209Kg3pSs7EZOeBULAqOasEZ4ppCkbfbionG6OsrKQe1Iw/ip7qwx+dRsT0NcbQDO2Kh4HFTnHaomTuKfNpYCM85qFickVMVPbtUUgbqKOgEf86ryLubK/5/WrBAPWo2XB5qQP/9H+5RCelOBJz9aiyRzn8KeSQPrzXjnsDjkfnS9OTUZbcMUoyRg/rQA4j/IqIk9TUoz0ajaM81Eo3YEWDR1NTYBri/iP468J/C34f638SvHV/FpWjaDpV1q+qalN9y2trWMySSHrkgDgYJJwACTip5APxy/4Ldf8FkfBn/BJb4H6fcaRpsfiH4leNUuoPBWiTtss7dbYBZtSv2HzeRA7qFiUZmf5cqoZh/lp/tE/tBfED9qD4m6x8bP2ifGWr+MPFWtam1/fzOG8hjKoyIQ5RYkjwqJHHGqhVAHAFfQ3/BWH9vrxX/wUY/bO8UfH7XnRdL886L4TsYhIEtNFs2KWqASHdvcZllY/ekdjgcAfnpoOnWWoyG3uZnV2BEUSxs+5iOPugkc45x7e9eth6ajG7R5tWbnKyNNPDLWptLm/eNYrtDLGiSK0gRTghwPuMQDjPX0qyLbQ5Guv7DllLm2226y/6yQs6oyEdnwexwR2xmuyvvAfjnUV0/SZIpla6kit4XmUqHeR9qKMZHHU4APqM1Pdfs6fGGK4mWw0LU7xIZvLa5treQpuBPOSPUVzyzbCreql8zrjk2Keqpt/I8qvNLtrWJwJGWdSB5Mi7WyAu7IzwMlsdfu+/D9TZ4Jjp/mhhbILc7TlTht5CkgHG8kjPI6V1Wo/Cr4kae+3WNKvIXGWVLhNjNjk4DEE8DOBzXGzaNrbzGSe3lBP70lkI3AjOencA4raljaM/gmn8zKrl9aHxQa+RLBqE0dvJJNFFLG7oH3khmdDkkYI5Oec5H419y/srftz/GX9lnxjpniDwRqN0DZzJLFa2tzLYy7CQ6NHdQMrqf4W6jOMgjIr8/hK0StGc4PXPfHSpFJdQCcbeQw7c5reUFJWZyH+vV/wTA/4KW+F/wBtL4SaXd69qMEuty20ZWdlSGSdyvzW86LhBdRkMDsAWUDeoB3Afrcl4rYr/Kb/AOCFP7UnivwJ+0jp3wruby4NhfuHsVB+SO+iZZbeRunAKsPcNjpX+nx4a8fR6vp8F6xw0kaO4HZnUMR9RmvCxPuSsevg3zrXc92WYbuuR9anAyd1cfp+qpcAEGult5vM+bP4VCldaHoFh6qkkjmrbAn5u3aqzgCsKy6gMJqEgnn8KkLAU0HcfT6ViwI8Ujfdx1pzdaaDzj9aHboBCDg0pYN1FI/DU0g560gP/9L+5VQueh/GlcAjinCkGe9eOewRhOMmnLyN3ennpzTU+7QAKu08UjY70rA8EdqCuTnmgBFz3r8zv+Cyq2a/8EvvjReXwsitp4MurxBfkCPfCQw2sWXbKACYiDneFwD0r9MxX8vP/B2l+0WPhR/wTIj+D9hEJrr4j+L7DSpWyVMNtpp+2u6kcMS6IhXPRskY5FRWqIqStFs/zARBNe3vkwKu7cen3AB1JJ6AetfsJ/wT6/ZTh8U3Efja+M1zGzB4GWIqjKOD8x7ZyASccZr8yPgz8LNc+L3jy18FaM/liVw93cdooFPzN7nso7mv67P2WfA2l+C/CtjoOhw7I7SBLWCMD+CMbQTj16n3r808WuKJYTDLDUJe9LV26L/g/ofp3hJwtHF4l4rER92Oi83/AMAxPGn7G2leJf7G1jThcLfWWpwaiu3C+YbXMrBRjAARcA45J57V9weBfhPoGj6AkWnxwTQzETxumH+V+VP5d/xr2rRNI8n+z7+dMtHcBW3DODLGydO/3hXQTaDJobST6PGv2djvEEKAGMkkkoOeCSTt7dvSv5grZtWqRUZyeh/U2GyfD05twglc+JPGn7Inw+8TTTXt3pUcsj5bbwMe6gfpXzl4o/Yi8I2ljcW1tpls8MqqHWeMORs6Bcj5cZOACK/VWPxFJGj/AGcb2UZZhyAO4NedeK/FRMWwpG7v91QRk4/wrejmVeEfcmyMRlOGk7zpr7kfzC/GL/gnHoAW+ufDIns5/MaRYpF3LnP8OOme4yRX5NfFb4Sa38I9f/sLxNtLN8waIH5R2DA9Div7WPGvh6xv7CWeIo0zoQOP73r9DX86X7evwyvdU8RPbRKsE1vEDLNMCqyFeUGQCCecKfev3Tw543xc60aGKqXj57r5n4J4lcD4SlQdfDU7S8j44/Yi+O/hP9m/9ozQ/if44tr2502wnEkv9nKkk45GGSORkRiOhBI4r/Si/Y3/AOCpf7Gv7UWj2el/CHxcj3sEEMd1perRvZX0EjgDE0cqjkt1ZSVz3r/LV8K+HLnxBrK+H5Imkl+baPuj5QTt3Hpuxwfz4Bx7Z8J/i54/+G9+l34BuZIbq2XzAIj5d1HGGy4gccnjO6MkgjOAMkH94xeDVRcx/PtDEum2j/Y08N66XCx7u+M5r2rSrsMgIINfzQf8EMf2+779r/8AZpstC8Y3Bn8R+GII7WW9kcGW/tFZo0mkTJZZYivlSZ+98r/x1/RN4c1UPEFzzivnmnCTi90e7CanFSR7Akg29fpUJYE9P8/pWdZ3O9OPTtWllSSa0nqkyiLaDTCpA+X8amcY6VEWIXJ65/z61M07IBmwkU3GKfkuMf5/pTD8vWod2BC4waYT7Gp2U/eqMkHkgUNAf//T/uWUgrkfpSY+bIpuSTgVIPavHPYAnjgZqIjaeKmphQnNAAFB560889aYnA5pxOBQAoAr+aT/AIOYP2Zfh/43/YD8fftMePPJutd8IaZYaL4BEqkR6YNVvbdNQkUAEvc3WFQMSAsagADLE/0tAk9a/Cb/AIOU7+y0r/gjj8TtQvTxFf8Ah3y07M7apCAPenHczq/Cf5nH7Hnijwz8Lo/FPxS8TsTBp6QWVvAmN9xPKWZYo84+Ztv4DJPSv0h+En/BQX403d9DfeFvBPn2Cqbie43PBBFGp+75rjDcDsCWPTFeJ/sVfsteGvHngfR/H3jS1guLAate63JZzA4cJiGHeM7dow559RX6I/8ADXHw88K+F9SuNP0k2vhPR72LTdRv9OsJLm2tZ5WKxJK0MbIjyYO1D8xHOMc1+S8SYrDV8dVhHCuvO9nvZJaW072ufrvDOFxNLA0pSxSoQ6d5N63/ABsfZX7Mf/BRIfGXUY/CeqaTBYubmOHdAJWAy2Qd8oXByMEkYHXPBr9rdC8P6B4l0s6noy5jki3AS/wcdGx3GOa/nN+HPxD8D+NvDl38WvhlczyafDqDw4nsmtUjMSoJo4pJI4i5j4ZlOW+briv1W+D/AO0rajwBLrSPlLuMRgs3GUBDFR6HrX5DxHSpYevZ4fkXVdj9q4ZrV6tD/eOd9H5Hyh+2V8Ufi18MVvj8LtL/ALUjjbyWlijzJJcMcBOoIVBy2VO7tgc1+b/hr40ft169er/winhl9RIVGuo9SspbNFZj92GYAoUx3Jz0yOa/Tfx/8VLC7s7rXdWkIhW48iFUfaXlfkD174A7ngV8q+Jv2/8Awl8F9WufAHixdY0fWYJLZW0nVtPvkmAuU8yPCeVgB1wwzglSMV9Lw5iXWpcsMBGdvJt/gfM8SYB06vtKuYOF/NL8zxC0/beufC/iBPB/x90W78NalLOIIb543+wszNsKvLjaFycB+nrxzXeftI/C7TPiz4FN/aJIt7aQSSQ+Xt3sjLlozuyrKeCNw9MEV9EeH/Enwc/bF8HXmkeKNO0q6mUmKSJ1jlwTnaSGGVIOcggEEYNcRo/gmX4Z6cfAk9xJcrZwfZrW4fJJhHEY7/cXA+grzMZi8PCsqmHpunOL1XT5HdhcBiJUXRxNVVaclpLr8z+XrVdL0nwt4n1yDWoZbW6sGgEDSSbNpnbYzBcneAuGxkj8DXiOpatpsupC8WSTdbTsN0HyM6lhiWM4GJAcnkAHA6c19Jft2WkFp8fNUtYmQyW5SCdohtVzjcrFezYJVvcZ718axBXnVZTtUsAxA6DPJr+rMmxLrYOhUfWKZ/J2dYX2OMrU+zaP6Wf+Ddz49yeFf299D8NaW32XTtf0K+0rXYWYhZr6fY0Fzt5HMqIvbBY54r/RS0DXwjKC3Sv8yr/g3l8Dy+I/+Cl2k21yrtBpOhanqNzsAZQ1v5ZiLHtiTGD2Nf6M1hrTxzDc2cmvMzV2q6HXlv8ADaPt3Q9UE6gk/hXe28okXj8K+YvB/iDftXdX0LpN15sa89QK4ou52ONjpig6ioCexqcElcDtULKeDVysIYpGStNI+b5jUnygGoScnJpAKcsu3tVdkAPNWM8YFRlhnkUX0sB//9T+5UP/AHqFIwW96TYcUu0YxXjnsCF/T/P6Ubm3YpQg70u3JzQA373I6jpUg98U0qD9PanAYoAK/IP/AIL0fsyeN/2tv+CUXxX+EnwztkvNeg0608V6bZuMvcHQLlL6aGL/AKavBHIIx/E+F/izX6+V45+0Z4H0j4m/s/8Ajb4e69cXFnY6v4U1Wxuru0kMU0MclrIGdHGMFevXkcHg1NSo4Rc10Lp0lOSg3a5/md/sQ+HZ/Ef7NGgaBdpM0dxZTQ3RBaN1T7RKGXjnPbrXvcH7NPhi08M3vw30DRtQbw7q1wk+raHBcS2+n3k0bBo5J7fJRnRgCHHze9e3/sV+HtLXwJY6bYRIkcdxfIqlfmRReTADv/Ov1l8J/CSPXVEkUSGTZyzDPHrX8ncQ8Q145jW+rNrmk3o2vyP7A4R4Ww88tovEpPlSWqT/ADPxm8ZeBNS8HfDGy+C3hTTrPw9ol5qouofD+nTzPbC8lID3ARmKqxAAZsZwABgV9bn4ZWfhz4bw6BM8cZWIRwyRcKmFxn659K3fiH4HhHxuW0uJozDpLLYo8mPKa6nwSF/3FwMnqT7V9N+OPAGl6h4Lt7WS+sQZVZIoo3Bk3IMcg5xk9DXgZrjcRiOR1Xruz6vKcvw9D2qp6LZH5zeFfhdeX/mfb7M6h5Mnms0czxXETqw+eAqV64B6gjse1YfxL+CPwi+KfjRPH3xM0XUNR8TQC3SPX9QuLme+j+yDbAokfLkIMAHcTwOeBX2J8ItO1bwx47j8C+OYsLdWssumXkXDh4RuMb+oKgkV9YaH8F7HxZIbuz2TSk87V4A9eP8ACjC51jaT9nSlo+zsXW4fwlaPtK0Vp3SZ+UvhT9nT4c+FLi+8ReCbe+s9Sv5PtWoXUKun2ibO7fKxOXYknLNye5Nc9431P7FfKuqk/aAhiIHJbpjOa/Ur4ieBpfCkbRQfJGhCSpIMHn0OO9flB+0harHrC3diSpEgQFepyehPatsvqTxFdRrNtnl51hoYWhektPI/mM/bonivP2g9aW3jj3mdDuiOScxLlWAPXvyK+N2gmgx5qMuc9QRn86/aT9mv4ReAP2gf26fGGh/EC1F5Y6e/m2kayNk3sc0SRMWU8Lu4fII2kgivuD/gp9+yf4J0v9nLxz45tNDt7DWdB8Q+G7jRnt4I4JIrLUXNjPagQhVaNZXDLxwa/pHBcbUcHiMHk8qbcnGCv6pW/PX9T+ZK/ANbHYXHZxGokoubt3s3f8tD6w/4NkP2YbTSPBvif9r/AFSVZbzVXuPDFhtPzRRQujSB+fvOykn22cnJx/V/HfMJcKSMnkCvyb/4Iv8AwPu/gJ/wTy8I6HqsJgvdauLzxFdIRtLC7kCwsQf70SKw9iPWv1LtdzzDH6V9JjKrnUlJnxWDpctNH0R4Eu3Mqkk4NfYPhxibZWJ5wMV8b+AbaRnRjnmvsnwzEUtlUjgYrOGx0TO3g+YYP1qaTnikhUAZFK/61o1YyICo5xUDKCferJ4XmoCuRn9aQEe9hTCSTn/P9KlB2/KaikJ3fKKdwP/V/uUDcYOacRkg01AMZFOb+96V457ANu7UoORmmK2TzTtyrxSAdkDrRTNwJz6UgcZ5pgSV8t/tw+Lx8P8A9jz4l+L3zi18G6mvynBzPCYBz9ZBX1JXyh+3R8M/Gvxm/ZC+IHwt+HNpDfa3rfh+Sz06znYIs0nmI5TcxVdxVW2ZIBbAJxXHmCbw9VR3s/yOzLmliKTltzL8z+Ef9hfxdLa2es6TqSiC4sfE2sWU0C4PlE30s0aZBI/1bqRjrX6neMP2r/AX7PvgGTxh471C20y0f/RVubtsDzGyVVQMszHBwoHPsM1+RWieDNb/AGUf2kPiH8BvixYajoOsR3Om+Lre21WBbSSeLU7SPzZYY1JVo/OjcBlOM5HUEV4P/wAFJdH1L45eJfh58KbMlrCQ32r3KnlDgpGrOvJyFyo+Xq3bk1/M+L4cWIzmn7RunCS5npZpct3o+p/TmA4snhcnqqklUlF8q1um+blWvbqH7Rv/AAVN+Bn/AAkkbeCLGbxDPqc8bXMoPlxgbwWwTl1c8Hcm08de1ew237VH7MHxR+GcOvfEzTtR1OWK8ktRo2o3chtILgoZcsU25wFIU5zvGM+vL/sCfsF/s9eLNfvINam8C+HtSt9SCRf8JlN9ouVaQmNI40lEcaqM5ypbIPJyBX9B+mf8Eu9QtNLe7ttX+FtxaxWSahLcm3iUmQAt5YcAkLkZDZx6V9XVyTC01CnhaMnb7Tlq/uv0PDw2cYirKc8bi4wb+zyu342vqfib+zx+3H8BdW+J0dj4kmutEudKgjOnW+qOVsVV8II7fb0baRwx6ZHXNfsD8Gf2lPhw3jdLfwbrdldQXqGaO1imRnRtp3DGeV9D68V8SftV/wDBNv4U3ugySfEDxL8Ko/s19IiGyvTY3QkSNZsmSASMxdpcbSjE/e6DFfin4U+CHxF+FH7TXgHxNaTTW+n6r4jWHSf3jBnYSjfG2Am5HWQsgZFI64xxXiYjhfD1OapGbpzSbSeqbS6PfXqewuL8XQ5adlVptpNpNWTfVbadLM/q2+L3i6y8U2Ek6EmQyErgd+a/GH9pbUF0O3k1rWj5UFs0l1Mx6bIV3cj3xX6d+JPEGj6NdzRTyfuFmmllkzwighF7dSx//XX88f8AwWD+NEOi6dpXw88G3Q8zXRIbpon3stuuFKYHI3k4z7HtXy/A2W1sXj4Rmvie/wCbPa8QM6pYfBTcXpHp+hB/wSgj8Lxa94r+PXi77PG2qeIoWiWITPdzQRFmZII0DDJkdSSxACqeeRX6M/t2/Gv4c/tEnwl8K/Dtounr4z8YaL4OBuMiaf8A4mUUschXJ+ZGVmGR2HbmvyZ/4J6ftRfsy/CnQ/EPwJ+OPiBvDc9pJa6r4a8TC2d7eWV4Nt5ZXAjVyvzFWRmGDgjIOK+0v+CbHgC9/bH/AOChWjeM7Oc6x8P/AIT3t74v0vVHt/JiubiYGOyU5G5m83bIiuAwVCxxkCv1Wlw3Wr57LF1YOMIWkm1o0l7tnbfbS/c/LcVxPQw3DqwVGalKopRaT1Um/eur7b627H9f+l+G9M8I+H7HwjoUYhstLs4NNtIR0SG1jEUY/BVFdDpNsWnAI79aqSSM8hckkk966/wzaPc3SACv0c/KY7H0D8PtN3BOPpX1ZotqEiGPavGfAGm+XEpxXvdlDsQAfSt6cSJvU0VG0YFQMSRmrNQuAOauRBAp5w360hb0pWAyMd6cMOc44qQK0gGCfbiqwcjg/wCf0q0+O/WoG2Z5oA//1v7k0Bzmn4GMDvTRkL361IOOK8c9gZxjBpny7sA1KRkVERjpWUwFJXGBTehpB0oNQA4tkYpFIz1pu4Ui8L6UJgfxK/8AB1N+zx4++Hnx2+Fv/BQvwZYXNz4dGmr8PfHd1blitq8dy1zppnHRIpRJKitwC4Cnkivyh+Dnxl+GPxP8cweL7loF1GPS/wCx9PlnYMPKMgkZFA6s7EYA5wMn0r/RH/am/Zw+Hv7Xv7PPi/8AZq+K0Bm0Lxlolxot2yKrS27TL+5uYdwIEsEgWWM9mUV/jx+OdC8RfsY/tWeLPgxJrkerr4C8V3/h1tQtklSC6k02doJJEV8OjMU2gY4Pcjk/M8S8LLMIOpB2mlb1PqOG+KJZfNRkrxbT9D+kjW/CNp4evk8VQabLeobjbcPaKJHXJxuMZ5kXPHynd6A16BpH7XH7Mdvap4M1sX8V1HM0M9vKjorzZ2kspJKhDgE44B5r85/Bn/BRO00TwL5+qvbJeCM5SQbWTK4GEB+VVOMMzEn0rx74UfHL4d33xFvPEk0FleNY6bPM9x5zShpZJZMjbISSZztARVwWYDjBz+TYDKsdCNRYik3y7f00z91nxpRgqaweISUt01t939fp+xfhbwNofirWW1690m4tbbzGe3Gox+WUKHAxEc4B5KuScjnuK2fjPqfwz0jWPCt74hMLXOianFq9gqSqHiu8bFkxg5G3d3+8B9a84b9qbwVZ+EN/jWaXTZ7S0BFg+13hLALskAO1njJB2DPAODxX4J/tB/tc6l8U/i4mraOVW2s9sDRRKzRtIrHL8/MEfggZ45HavNyXhvG4/FTqSTiop/1fzHxPxjhsLh4wU1OUmu3ft5H7L/tc/tNT+G7GXxMsirZpbrdPbIcedOVcQxk56M2ZACOdo9a/mj13xj4n+P3x3ttU1S5a6uJriKKNZTwqxAKcDoBx0FfS3xZ8aeO/jHq1l4R8GC81WWa0R5bCziZ1glkwvlyFuAsarhSx45ya634Ffsq6/wDCWC/+IXxFhH9qGF4bDT0ZZDG0gIy7DK7zxjDcV+lZBhcPlmElOTXtZK0V1102/U/Ks7xOIzPFxUU/Zp3b6aeZ+b2r6YIpptVIgvJdVu7mGzgt5C00TI+CHTHBbcAvXjpX+gz/AMEPPgHZ/A/9grw9rTWxgv8AxdGut3u8fO2RtUk9TnnHoMAdK/g8+GnwS8ceIPj/AGfwr1TTrvSNQTxPZaFfQ38T+ZZXdzcrEFkUDJkzuwB1HTNf6i3gL4e6P8KPh/ofwt8Oj/QfDulWujWrYwWjtI1iDEerbdx9zX6Vmk7QjTPzLAx5qkpnV2wd2HHBOK9n8D6b5lwnGea800qyEsipivpXwBopEqtjArxUrns30PoTwfY+VAmRXqUYxzXL6HarDEv09K6pRgV2ReljIazAg561C7kVOQq5J/WqjA5yacocuoC/M3I/KkYFeKegAFRuwBzWbYFds8n8qgye4FTPz09agbg1IH//1/7lVB4zQxI6VED3FP38e9eKp9z2B28Y/wA/4VGTmkZu5pj4rOUrgPpCCe9ICf0/z6VIMdD61IEQUg9afTmABxTCcDJoAVCVZXH8JBx9K/zhv+CuP/BB/wAQ/s5fFzxt8WLrxNYa1oXxS8Zal4j8GXaRPBqWmajM0t3c2l+gXymiPm4jeJvm2Z2JjB/0dQWPTFfhl/wXet7TWP2cdCtYlWS60bxNa6vMARuSC6Sa0BPcBmzj128dK8/N6tWGEqzouzir/dqenktKlPF0qdZXjJ2+/Q/yzPHHgv4ofDfVJdK+IGmXcc8ERt4ZirPDIFJG7zF4PfHfv1HPH+GvGD6JqSRxSGCIrC07KQG3ROsiEZHVWHGOa/qAv/A8eo+J2t9RhSWOUhwGVXBHb5TkGvofwb/wT4+DnjC2bVtS8NeHrgFAHL2EQcg88/KK+Mn4q4alCKxNHV9v8rfqfbQ8KsTVnL6tV27/ANfofySW/jbxx4ynkgsTqd7eTzlrdd8koOMDJT5ixbnjFfov+z7+wZ8SvHWnf2lqlvc6LZX6gXplQxXUoHzKUDZMa54GffNf0u+Cv2Nvhx4TkR9D03SrGOPO0WttDGRn0CKo/rX0dpHww0Pw7b+fADIzccjIPt7fhXxmfeLUZR9ng6agj7HIPCSUZ8+LqczPx3+Ff7Kei/B3R/7F0CzS3BPnXV3IN08zjhi8hyTkds4GeBX3p+yF+wzf/Hb4kWvxM8TWzQeB/C98l7eGVPl1O+hYNFZw5++ocBpn5CqNv3mGP1M+Dv7BGpfFae28X/ExJtH8PhlmW1UFLy/Qc7UBAMcTD/loRkj7o7j6i/bB+Nfww/Yf/ZX1/wCKmoWtppugeD9Gf+ytJt9sUc90RttbWMd5J5iqk8sSSxycmvqPDrg3HY6tHNMxTjBapPeXm10X4v0Pl/EbjLA4DDyyrLHzTejkto+SfV/gvXb+PD4x/HX9nf8AZ3/4ODb/AMUfFG2im8KLqGmDUZ5JStrpXiOXTY4YdWkjUFXNsXG7I+QMZB8yCv7H4HgvoY7uzlinhmRZYp4XEkcsbjKujrkMrAghhkEcjiv8o/4ufEvxV8Zvilr3xY8dztdat4h1S51bUblud89y5ZseijO1R0CgAYAxX9Nv/BFX/gs3oHwr0K2/ZO/bL1prXQLONYfBHjHUCzR6dEg506/cbmFuMD7PKciPlGITaV/Ws2wjm/aRR+RZVXVOKpyP7RPDOm+dIqAd/SvrfwToyxQo+K+Wvg14r8FfEPQbTxp4B1XTNc0e7RWtdT0e5jvLWUHkbZoWZD+dfbXhlY0gXb25614EFY96TXQ76zi2IBitHntUMBXZwffNShsj2rpgktWQRyH1qPANBJzu7UZGM0lLv1AjL7Sf5VGxwM09iCcioWPOD0rNgRE849agY4Pf8KskgfSqx5NID//Q/uRxmkIGKiG7rzSbmJxXg3R7A5gWORTBnp0qZRgYNBUHmpAMdKWoppYraF7idkjijQySyyMEREUZLMzYCqBySSAK/BH9uP8A4OQP+Cbv7F2p3ngnTNbvfif4ssy0U+h+ABHc2ttMvBS61SVls0IP3lieVx3UVcIOT0QpSS1Z++W3JFfDv7Z3/BSP9ij/AIJ/+Hjrf7VPjzSvD91JEZbHw9FuvdcvsdBb6fAGmYEkAO4SPPVhzX8Bf7aH/B1T/wAFEP2i4r/wv8AxpHwf8PXSvCp8OK13rxhbgb9Uuc+W+Opt4YiPU9a/mt8W+N/FnjvxLeeNPHWqajretahM1xqGsaxcSXl7cyucl5Z5WZ3Y+rGu+GAe8mcs8Uvsn9nX7av/AAd9/FjxLdXfhL9gvwLY+F9NIeJPGHj2NdQ1Z1/56wadDIbSA91Erz9iR/DXtf8AwSN1L4w/8FPf2QvjD8Qf2rPFN/rfiT4g+NI9OTxFdxxRmyk0Kxszp/kQwRxwxwwyZBjjQAhn4yxNfwdvcDekbDJkbn2Ucnn+df6M/wDwQZ+EurfA/wDYP8M+D/E0bQahqdzd+K7yCQbHjfVXEkSN7rCI855HSvQw+X06ilBx0as/meZi8wqUnCcJWkmmvlqfmz4k8AeIfCfxAuPAfiuwk07XdCnNhqti5B2tHyJEb+KOQYeNxwykGvs34byatFpSaexVFOGypy3oBX6Lft8eEf2X9bm0zV/G/jTwf4Q+IUdiYtPGt6hBaz6nZjLLbzRsfM8sEny5SMITnO0mvnH9nP8AZo8afFq7RbG80uz05Akl3qFpqFpqISIkgCMWckvzNg43EDiv5Z428L82pYqNHCUZVISfuyS0t2b2TXna5/VvBXijlNTCSxGLrRpzS96Let+8Vu0+lvQ6b4f/AA18XfETXIPD3hi3N/dP8xVQAsSd3lY/Kqj1Pf1r9ZPgz+yV4S+HCQ+IvGnka1rceJImZf8ARLVsf8s0YDe3+04+gFeq/CX4c+BvhD4aj8L+B7Vl3fPdXkvzT3Und5HwMn0HQDgAV63LLsh/ed/ev1rgPwiwuWqGJxqVSt/5LH0XVru/kl1/I+PfF7FZk54bAt06P/k0vV9E+y+bfTn9UkJUvK2SR6evQYr/AD9P+DlL/goLD8bvjPF+yP8ADK/Mnhr4fXUh8QSQN+7vvETrskQ4+8lihaEdvNaTsAT/AFQf8FlP2/7T9gv9j3WPGmizInjHxEz+GvA8HVjqFwh8y7Az9yyiJmJ6bgi/xAV/l+eLNW1TXtYuNU1m4mu7q7nku7m6uGLyzTTMXkkdzyzMxLEnkk5r9fxUuVKn33PxzCRcnzs4zT7Np13MM85Irfu7P7PayTPwEjYk/QVPpse0cL3+nNS+JH8rTTECMyfL+BrzpnopnsP7LX7av7S37IXiyPx1+zn4w1bwzd7x59rbuJbG7QHO25s5d8EqnvvQn0IPNf2k/wDBO3/g6b+FnjZ7P4f/ALfGjReDdRciFPHHhyKW40SU44a9tCZLi1JPV4vNT1CDmv8AP9jYxSOvYEYHtXaaZfGNQrfQ1y1sFCputTsp4qULWeh/te/DD4q/Dr4weC7H4ifCnXNL8R6BqEfmWOsaNcJdWky/7MkZIyOhU4ZTwQDXpCzK3Nf45v7J/wC3h+1l+xN4qXxf+zJ431jwyzyiW90yCXzdLvtv8N3YyboJQRxll3Y6Gv7Af2J/+Dsr4b+I47Twh+3h4OufDt85SF/GPgmJ7zSjnjzLjT5He6h5+95LSjuFHSvHrZbOPw6o9Wjj4S+LQ/syI3HI5pVU4we9eAfAD9p/4BftSeC4viB+z14u0LxdpMqK7XOjXSyvDu/hnhOJoHHQrLGrA8EA1755wIyK4GrPVHamnqhpHaqrkjp+dWGIbIPWqz9PxqWxkPIqJiVbBOKtbccioH5Y7hn3pAf/0f7iwxXg9P8APtS8A7genXNN2kjNSKoAzXz57A4Pjkd6/ny/4Lf/APBdPwb/AMEtdAsvhP8ACyx07xT8YPEFiNRsNI1BnbTtE052KJf6isRV3MhDC3tw6F9pdmCAbv2t/aC+Nngn9m34H+LPj98R5hBofg/QbzX9RYnBaO1jLLEp/vyvtjQdSzADk1/jQ/tUftG/E79sD9onxb+0n8X7t7vX/Fmrz6ndl2yltGzYgtIR0SG2iCxRqOAqiuzC4fmd2cuJrcqstz65/bG/4LJ/8FF/25dKfwp8e/iRqs3h55XlPhjQVTRtKfec7Zrez2G4VeiidpNvbqTX5eEfKEAAUcqo4A+gqcx7eWqCVgvSvZhTUdjzJTb3I5pREMdx/WsrzmVvmAPPFJJNlue3XvVESBpS341M5dDRKx9ffsQ/Bj/hof8Aa08A/CieB7q21fxNZQahCnVrNJBLdZ46eSjAnsDmv9H7x7efETwP+y54q8Y/BE2sfi208NaxdaBNdxGS0trq2ikkjeWIY3LEqgInQtsByuRX8lP/AAbYfBD/AISv49eNPjZLCD/wivhlNPtLl1B8m51aT53jJ6OIIGTPXEhr+53wj4S0bTvh7DHqEpe0v7OWG6EuBGI7pWD8dP48E+gHYCvoMtoJQi31Z85mVVutb+U/ynrb4m+Lfirr134q8f3l7r2v6pctdX2sapM93e3E0h3M0kshZmyffjtX6ff8E9f2wPi7/wAE9PjRafH/AMJNF/Zbotn4m0CRvKg1jTC4aWBx2lGN0MuCY3weQSD+fng3wr4e8EajrXizVmX+zbHXr2xsh1MywTOqhR3GAOa9f+BPwY+Pv/BQ7456b8DPgjp5klu5C8rAFLSwslYLLd3cgB2Qxg5JPJOAoLECv2KgqVPBL6zrzLReXdnyeJ5pYpqlok9X59kf6qv7On7QPwd/am+CegftCfArUo9V8NeJLP7XY3CkCSN1JSa3nTrHPBIGjkQ8hh6EGvWbuTzE+THHYnivyF/4Jk/sq+Bf+Cc3weh+APw21DUde0+S8k1TxRrN67BLvVJlVHntbYuyW6IEVAiY3qMsS/Nch/wXX/b0j/Ye/Yb1e88IX4h8Z+P0l8I+C/KYeZE1yg+3Xye1rbMxU4/1rx9s1+P4mgqVR2d0j7ClPnStufxef8F2v28U/bd/bl1S38HXv2jwP8PPO8IeFTC5MF1JDKf7Q1BB0P2mdcKw6xRx8+n4sebHcSC3k4P8B/pThbmCMDJYkZLE5J9yT1PrWZdcqSODjaa8ScuZ8zPWjFRSSN9b20s4yLqWNCP4VYMfyBzXO6pd/wBpMogLMincxYbcntjNUolgiITABHfHc1Ymkwvlx1nya3KOUuo2Ex6emBV+xYgAN68UlwDu5HerVrC2/djjtVWLctLGzG5wPWtKG7kThT3qC3tvly3Aqw0e0DZk54JFJq5KlY9T+Evxw+KvwJ8XwfEH4NeI9b8Ka3bOHi1Tw/ezWNwMdmeFlLD1Vsg9xX9TX7C3/B1x8c/htPZeCf27NAg8d6IMRN4v8ORpYeIIF6eZPa/8et5jqdvkOfVjwf5CmiIBZ+AOSfQU+OzuJuhKjsD1/wDrVz1sLCa95HTSxMo6pn+xR+yN+3l+yn+3N4F/4T79mHxjpniW2jCC/sEJg1OwkdciO8sZds8LdcFl2tg7WODX1ulzG3PB9q/xd/hV8QPiH8GfGOnfEb4U69q/h7X9LuUubLVtGupLWeKSNgVw8bLuGfvI2VYcEEE1/qIf8Eiv+Cgkv/BQP9jXQvi74na3j8W6ZLJ4b8a29ttVf7VsgubhUH3Fu4ik6qAApcqOAK8DGYL2fvJ3R7ODxftfdtqfr2zgkFagZSzE/wCf51jWmopKAAfyrVEoIBOOnevPO0//0v7jN2TgZFHO4CoI29KlBJIzXz57B/Mb/wAHYXxz1H4af8E2tM+Fei3Jt5viJ48sdJvVQ4aTTtLifUZU+jTRQZ+mO9f5osalFz1yS351/cj/AMHj3xGSXxN8DvhBBJlrfTdf8VXUQP3fPlgsrdiPfypxX8O0ahoFPsOevb0r18IrQR5mKV5FKU78nHPasqbrWpOdr4U1i3EhG489OK7efQ5lAxpgGy3qc1XjjL8J94ttH41bYgr+FWtHgefUoYYYzI+75EHVm/hA+prM0P72v+DfD4OWnw0/4J9p4vliCap8S/Ft1P5uPm+w6e/9nwKP+BRzP/wIV+4v7cvxRt/2bf2NviL8bfJjuZPCvgm/vdOtZ8+T9rMX2e0DgEEhp5I1P14rxr9gH4Fp8KP2f/hT8IREyyeFfA2myagGGNt9eRCebI7MZJJCfevy/wD+DnH9rzRvh1+zFo37IXhrVIl8R/EDW7K91zT4G3TR+HdOdpw0gB+RZ7uOJUB5fy2xwDX2WEpNunBeR8q5KUpSl1Z/FpqGjQ6J4K0a98YC+1B75JZoLHzvKghYsQx+Vd2WbnGfzr+9D/ghp8B/g78Hv+CdPhX4oeBtL8nxb48S6fxDqQBaeeWG7nhSLe3KQxRoAqjjOSeTmv40tX0HT7/4b6ff3yIRpsQmjz2yOvvnrX9rX/BEi71DWP8Agn18N9IuFMYRtbvSDy5STU5gg9gcbsV+m8ZYH6vQg4vTT8uvzR8pkuMdepK/n+Z+w+haTBZafBbooBlkWNgO/v8Aia/zwf8Aguz+2vcfte/ty6x4Y8PXZn8G/DBrjwX4aVDuhmuYZT/ad6mOP39wNgI/5ZxJ71/Zj/wV1/bCi/Yn/Yk8U/EfQbiODxPqcK+FfBsZbDtquohl85V6n7NAss/oCgz1wf8AM0COiHzGZ2OSzOdzMTyWJPJJ6n1r8azHE6KJ99gqCV5FKUfLhSPc1zU8oJPPQ4xity5+6QOOwrKitVVGvJQNq9ATjJryIt3PU5Utyrh8YIUO3IJ5Kj1NI0bqN2eKtpDIzGR+rdf8Ksxx9nHQYzitTIxPKLtxyAec1uWNhMeMGtW30wSduCMjjvXW6dpo24cHip50BlW+n7igkXp1z/KtR9OUArGuAOeP5V0cdrEuAo6dc1JdyDTrOS7kHEKlyPU9h9SeKzcwOCfTlurs2uflgAaY/wC23Kr+A5PvitKSKJAoj4AGDnvWwLf7DpiLcA+bLmedv+mkh3EfmcVzs9zEjbpDgDAFDbYDSyxMWxjHoc1/VD/wa7/tBXnhP43fEL4BSz4svEfh238TWkRPAvNIl8pyPdoLk5/3BX8rBmjlzsOc9K/UL/giF8Rb/wAC/wDBSrwDaLIYotYmv9BmJyNyXlpLtX8ZESuXGU+alNeR04OfLViz/Tr0PxV5rjDdSK9Li1YyRh8jmvjbwzrjRSKrt0I5Jr3ix1ktbKQf1/8ArV8nB6H1slc//9P+4RBzmpgxqBVyMtVlVB49a8BI9g/zR/8Ag6m+JV742/4Kkah4TaQtb+DfA+gaDBH2WS5jk1KUf99XeD9K/mXA2wIB02Kf0FftD/wXm8Zt47/4Kt/G/VlIZIPGC6ZEc5G2xs7eDA+hQivxrMASAIOdoUH8BXtUVaCR5VR+8znLlQWyePesS5VQhI7Ct+5Rj8zdqwrpcRnPetSDLkwvAya+pf2JfhsPi5+1d8Pfh7Ku6HV/GWjafcjt5Et5F5x9gIw2favlxsGTHvX67f8ABD/4fXnxD/4KGeB9PsUDyWrapqS8ZCtDZSorH02tIGHuBW+GhzVIx8zHE1OWnKXZH+j54Y+I3gr4QfA3xX+0V8Sp/sWh6VZX3iHU7sgZj07T0ZgEBIBYomEXjLMB3r/Lc/bO/a88d/ts/taeIv2kfH7MlzrmomSxsc5Sw0+LEdnaR9tsMCIpx95tzdWNf2J/8HPf7UEv7P37G3gv9jbwTctbXfxCu/tOtRxHDDQtFCFomPULcXTxA/3liYHgnP8ABfpQM2oJMex/lX3WXL301u2fPQofu232P010PxCPEnhW08N7vnuAseOuFA6/17dK/wBEz9gv4EQ/AD9nTwT8Pmia3n0jwRpX25ZBhxeXyG9nDDg7lebaR7V/n0f8ExPAH/C8P21/hx8MLpDNa6h4p09LtCu4G2ilWSfd/s+UrZ9q/wBB39vj9rTw/wDsb/sk+Ov2k7lolureCWLw9azHButTkH2bToQM5IaUKzY6IrMeAa+s45zV1KNGm/V/Lb9T5rIMAoVZtf1/Wh/Gr/wcO/tmH9oX9sKP4DeFbky+GfhVFJpkqoQY5/EN0A9/LxkEwJ5dtz0ZJBxk5/n2u5FCnt6fWui1XVtV17UrvxH4inkvL7Ubqa/vbqYlpJri4cySSMT3ZmJrlL50JLKcZ4/PtX4vWnzycu5+h0o8qSM3a08nlAH1JqrKEuG2R48uPIX/AGj61ZdHhgMAY+ZIMuR2X/69SwQMsQHBHpilBdTSbII4y7gIDwOa2La0eQ4K4z+tPt4drAgdhgV1NlZM+zPQdvSnNkBZ2LxjDqMDpXR2sKYwwA5xxSwQ56dsfgRWjb2pCndk5NZALFbRYzxWFqjx3msWuhqcoP8ATLon+5H90H/gWPyrqXkit4XnlwEQZz9K4LwzIdRTUPEchAa6m8iH/rlH0+mTQO5keJ9anmu/sVkCx67scCucbTrkjfdOxbutdpNHBCMqoyepP61SufLkxk/7IP8ASqUrCOQZzaOCM4xX37/wTCR3/wCCiXwZv7L7x8cWKuF69Tn9M18LXlmJ0O0Hj1rrfgr8WPG37PvxZ0H4u+AZlt9Y8PapBqunySruTzYGDbWB6q4yrDupNTUXNFpb2LptKSbP9TrRr+RbxUyeozX0Fpt8v2RAT/n86/Pb9lb46eHP2lvgf4V+Ofhbalt4i0iG+kt1bcba5HyXNuT1zDOrpz6Zr7u0iMtYocA/U18S7xbR9nzJpNM//9T+4VGBGKe1zBaL9qu2CRRfvJWPAVF5Yn2AqsDkZrwH9rLxbceAv2U/id44tH8uXRvh54j1OGTustvps7xnPswFeAtz2Gf5C37X3xTf40ftIfEP4tyOz/8ACTeNda16JmOT5d5eyyxLn0VGVR7Cvm3YHj3jHIBqfWrjcoViSVjUMT645qCxINkpbkAshP8AKveSskeO9zCuIs5H865rUF2Q8+o/nXZ3Jwp4+tctqcf7ncPUH3pgc4PlfntX9Uf/AAaofDeDxD+134s8eXcIkGheDDFAxXOybUr2ONce5jikFfyuyAh93HWv68/+DZ7x1ovwR+Dn7TX7QurkKng3wHp2tEswX/jzi1a6A/FoQB74rswCvVijlxv8Nn5cf8HCn7UD/tLf8FNvG0GnXTT6L4C8jwBo6B90Stpa/wCnOnOPnvXm5HUBfQV+LWnSNEA56g5FaHjLxNrnjnxTqXjXxJN5+o6zqFzquoTnrJc3crTTN+LsTWfZM0jLEOrOBzX3OGjaascdSPuWP6xP+Da34EReI/2gfEPx8uo1Y+EvDMtrZB1yBf6yfskEintsjMx+u33rT/4OQP2ux8QPjVof7GHhK536V4Dji1fxG0bEpNq9zCBbwkDgm3gZnb/amxwV5+sv+CJPjzwr+xh/wS7+Jv7XnxDSIQ2moPdwxs2x7x9LtV+xWa56tcXl0qKBz3xxX8m3xG+IHiz4v/EDX/iz4+uWvNd8S6tda3qty38dxdSGRgvoi5CovZQB2rj4zx18Q6ceiS/DX8bnl5Bh/c531b/r7jzC/ZYoeoUjA9a5RSsivdzEhIgDgfxE9h7k1u3+bqQW4zz1PpWLcRNcSGGMjyoW2g9mfoT+HaviIq7PoiC3R5W86f7zHJHX8PwrbjibOF4BFQQJtAxyBjJrYt4TKxYVq5JAOtLYiUY6dBXb2MDIrMRkgDpWVZWchfIGcDiuljDJFkkjAxwfSsW7gTW8TLF26nk1ejQ5IJ49fWsr7agIXIAHJ+tPuL5LSFrhifunqe1IDjfiJrq2OlGxtj88pCqFPc/lWvo1sun6Ba6YOqxBn46k8mvG7u8Ov+LIYScpC3mv6cdP517dGcpvUArgYz6Cn5DaMW5iZSW27l7gnnmsO8IHyIADkHIFdPdyEDcuenpXL3mEznIyRikIh2uy8/Q1jahZ7zmPnHpWokhXpnp3PHFOWSKRdzdcmmnYD+uv/g2m/aEvPE/w38c/s2+IJt7+Gr228SaJHIfmW01AtFdogP8ACs6IxHYyE/xV/WLpt2kdqFz+pr/Pe/4II/EW88Cf8FFtK8P+YY7fxX4b1jQ5VzhWdIlvYQR677YAe5r+9e31wpEF5r5fNYKNZ266n1GWz5qSv0P/1f7fwq7a+Fv+Co2tDw//AME2/jtq27b5Xwr18Z9N9qyH/wBCr7ljcEYA6V+MP/Bwv8Vk+E//AASK+LV15nlzeIrCx8HWw6Fn1e7iiYD6RB2PsDXhU17yPeqRtGT8j/KZ1KeN5NrEfN1Poas6OSLeSBscOCPx/wD1VkXWxpAV9efetXRBi5YSDIZOlfQyXunzsHqS6hGT8qjr1PpXJ6orCMrgHjP5V397FkFlH1rkb6MsSp7gisou6NDg5V/ec/Wv1l/Zh/aOl+Cv/BPT9pL4e6ZP5N94/wBG8F+H7chtr+R/aly14FHU7oCytj+FiO9fk7MMOM4966XxLJIvhzT2QsELPuXOFJXoSO+MnGfeu3L3atEzqxurHGzMCwAJxmui8J2rX+u21kgyZZUQf8CYCuX64zg16t8J7RZ/GGnOgLMt0khHoEO7+lfo2U0XVxMIrujxMzreyw85vomf0k/t++MrD4P/APBJ39nf9mjQnaG68fXF18RdYhVtpls7aWZbUuo6xs00QX3gHpX8/wBeSrChDcAA7cf/AFq+6/8Agof8Y1+KXx30Pwhpsyy6P8Mfh94d+G+leV9wyaXZq9/Iv+/eyzfVVWvgW4dribfKAI4hucn0H+NfBZ3ifbYqrU7tnXl9D2dCEOyMm4k8mD94Ns0vCkHBVT3/AMP/AK1NhijjRbeOEAAdm71DeO8uLiRgC8ylQ3ZQDV6K5tmHEinPXGcfyryzsuTpaSE7Y4//AB7/AOxresYGHy7VAx3Y/wDxNRWlxbKR82RjBIRuP0roEu7VSGUSso67Yn/+JpANiuXtjiOOLv8ANuPT8hVG71S7+7GsQ9SAx5/MVNcX9qOUhmHu0ZH88VyuoahGgJRHGO+VGPzagCGTUtQhV5JJh14QRjk/Uniszxbr01tAbVm5x8xB6nvVCa/jlmjiJHEisxzkkKc9q898T6oZbpgTnmtLdSoq5r+C9st9NfSdCwTPsBmvomwINmncbcZHTFfOvg5GXTw/PzOT9ecV9AaXMDaomMDAFTLuE9x18Fjj4GR7+tcveYKKzfh6k12V1b/uSw646CuRvMQsok5649jSRJgiUpndj8ar7wx3x4yOoq3JErk7R2/yazSTaN5jVo1cD9B/+CV2utov/BRT4Qahv2+Z4ytrNu3FwjxEH2Oa/wBE8OFG09vf/wCtX+bb/wAE+r6Gz/bq+D+oBwqr8Q9G3HsM3Cj+tf6Q1xIVnYKOM18tnitUj6H0OTv3Jep//9b+3uH7n41/NB/wdkyyx/8ABLWxSNmUP8VdAVwDgMBZ6icH15ANf0vw/c/Gv5nP+Dsz/lFvp/8A2VbQf/SLUa8XD/xI+p7mI/gs/wA1GUfID7CtPSv+Phf9w/yrMl/1Y+g/rWnpX/Hwv+6f5V9BPY+ehudLeHEHFcjf/wCs/wCBV117/qBXI6h/rP8AgVctM1PPLvqf+uhrp/E4H/CFWJ7/AGpxn8BXMXfX/tqa6fxR/wAiTY/9fT/yFdNH4kJnAR9RXt/wPOPGNsw6jeQfTg14hH1Fe3/BD/kcLf8A4H/I1+r8Lf75T9UfNcSf7nV9GaukyyzWBnmZnd23M7EliT1JPUmn3BP9lSH1mQH3G6oNF/5BY+tTXH/IJk/67p/6FX5RPeR7xlL94V0+m8zjPrXMJ96un03/AI+B9RUPZAdLZkmXB/umr0x/dZ9/8KoWX+u/4Cavz/6n8f6ipA5i7JMJJ9TXAah1f/drvrv/AFB+prgb/q/+7VQ3A5on5s1wWqkm5yfeu9PU/WuB1X/j4/E1pPYuG53nhT/kHRf77fzNe2acSLT6AYrxPwp/yDov99v5mva9O/48z9BWb2Qp7m5KzeWvJ6GuU1knn611Mv8Aq1+hrldZ7/UUQ3JMJSdo+p/lVDUjyfp/Sr6/dH+8f5VQ1Lqfp/SqjuwPoT9ipmX9r34W7SR/xcPw90/6/oa/0w5/9e/++f51/mdfsV/8ne/C3/sofh7/ANL4a/0xZ/8AXv8A75/nXzOffxIn0GT/AAS9T//Z" alt="Sandeep Gautam">
+          </div>
+          <div class="term-footer-text">
+            <strong>Sandeep Gautam</strong>
+            currently open to Data Analyst &amp; SDE internships
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">01 · Profile</span>
+      <h2 class="section-title">About</h2>
+      <span class="section-sub">// who's behind the dashboards</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm an <strong>IT engineering student</strong> from Mumbai University, currently in my final year at
+          <strong>Saraswati College of Engineering</strong> (NAAC A+ · Autonomous · NBA-accredited). My work sits
+          at the intersection of <strong>data analytics</strong> and <strong>software development</strong> —
+          I clean and explore datasets to find the story inside them, then build the Java, Python and SQL-backed
+          applications that put that story to use.
+        </p>
+        <p>
+          Outside coursework, I've picked up hands-on experience through EDA workshops, hackathons and freelance
+          web builds, and I'm now interning as a <strong>Data Analyst at CodeAlpha</strong> to apply that on real
+          problems. I'm looking for internship and full-time opportunities where I can keep doing exactly that.
+        </p>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Mumbai, India</span></div>
+        <div class="info-row"><span class="info-key">Degree</span><span class="info-val">B.E. Information Technology</span></div>
+        <div class="info-row"><span class="info-key">College</span><span class="info-val">Saraswati College of Engineering</span></div>
+        <div class="info-row"><span class="info-key">Email</span><span class="info-val"><a href="mailto:sandeep8108gautam@gmail.com">sandeep8108gautam@gmail.com</a></span></div>
+        <div class="info-row"><span class="info-key">Phone</span><span class="info-val">+91 81082 36430</span></div>
+        <div class="info-row"><span class="info-key">GitHub</span><span class="info-val"><a href="https://github.com/sandeepgautam-art" target="_blank" rel="noopener">sandeepgautam-art</a></span></div>
+        <div class="info-row"><span class="info-key">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/sandeep-gautam-" target="_blank" rel="noopener">sandeep-gautam-</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">02 · Stack</span>
+      <h2 class="section-title">Skills</h2>
+      <span class="section-sub">// tools of the trade</span>
+    </div>
+
+      <div class="bento-card bento-2">
+        <h3>Data Analysis</h3>
+        <div class="chip-row">
+          <span class="chip">Data Cleaning</span>
+          <span class="chip">Data Visualization</span>
+          <span class="chip">EDA</span>
+          <span class="chip">Statistical Analysis</span>
+          <span class="chip">Data Modeling</span>
+          <span class="chip">Data Validation</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-3">
+        <h3>Programming</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+          <span class="chip">SQL</span>
+          <span class="chip">HTML / JS</span>
+          <span class="chip">Plotly.express</span>
+          <span class="chip">Matplotlib</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-4">
+        <h3>Business Intelligence</h3>
+        <div class="chip-row">
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">Dashboards</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-5">
+        <h3>Tools</h3>
+        <div class="chip-row">
+          <span class="chip">Excel</span>
+          <span class="chip">Google Sheets</span>
+          <span class="chip">Jupyter</span>
+          <span class="chip">Arduino IDE</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-6">
+        <h3>Database</h3>
+        <div class="chip-row">
+          <span class="chip">MySQL</span>
+          <span class="chip">SQLite</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Python <span class="sep">/</span></span>
+        <span>Java <span class="sep">/</span></span>
+        <span>SQL <span class="sep">/</span></span>
+        <span>Power BI <span class="sep">/</span></span>
+        <span>Tableau <span class="sep">/</span></span>
+        <span>Pandas <span class="sep">/</span></span>
+        <span>NumPy <span class="sep">/</span></span>
+        <span>Django <span class="sep">/</span></span>
+        <span>MySQL <span class="sep">/</span></span>
+        <span>Jupyter Notebook <span class="sep">/</span></span>
+        <span>Python <span class="sep">/</span></span>
+        <span>Java <span class="sep">/</span></span>
+        <span>SQL <span class="sep">/</span></span>
+        <span>Power BI <span class="sep">/</span></span>
+        <span>Tableau <span class="sep">/</span></span>
+        <span>Pandas <span class="sep">/</span></span>
+        <span>NumPy <span class="sep">/</span></span>
+        <span>Django <span class="sep">/</span></span>
+        <span>MySQL <span class="sep">/</span></span>
+        <span>Jupyter Notebook <span class="sep">/</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">03 · Track record</span>
+      <h2 class="section-title">Experience &amp; Certifications</h2>
+      <span class="section-sub">// internships &amp; credentials</span>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item current">
+        <div class="tl-date">Aug 2026 – Sep 2026 <span class="tag-current">In progress</span></div>
+        <div class="tl-role">Data Analyst Intern</div>
+        <div class="tl-org">CodeAlpha</div>
+        <ul class="tl-desc">
+          <li>Working on real-world data analysis tasks — cleaning, exploring and visualizing datasets to surface actionable insights.</li>
+          <li>Applying Python (Pandas/NumPy) and dashboarding skills in a remote, project-based internship format.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Workshop</div>
+        <div class="tl-role">EDA Workshop Participant</div>
+        <div class="tl-org">Anudip Foundation</div>
+        <ul class="tl-desc">
+          <li>Built the Netflix Data Analysis dashboard as part of a structured exploratory data analysis workshop.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cert-list cert-list-3">
+      <div class="cert-row">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Data Analytics Job Simulation</div>
+          <div class="cert-issuer">Deloitte</div>
+        </div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Data Analytics Essentials</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+        </div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-icon">☕</div>
+        <div>
+          <div class="cert-name">Java Building Project</div>
+          <div class="cert-issuer">Udemy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">04 · Build log</span>
+      <h2 class="section-title">Projects</h2>
+      <span class="section-sub">// things I've built &amp; shipped</span>
+    </div>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-index">01 · EDA Project</div>
+        <h3>Netflix Data Analysis</h3>
+        <div class="project-meta">Anudip Foundation Workshop</div>
+        <ul>
+          <li>Built a dashboard analyzing statistics data to surface performance trends.</li>
+          <li>Studied customer behaviour and regional trends to flag growth opportunities.</li>
+          <li>Used predictive and statistical analytics to support strategic decision-making.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Jupyter Notebook</span><span>Python</span><span>Data Visualization</span><span>Predictive Analytics</span>
+        </div>
+        <a class="project-link" href="https://github.com/sandeepgautam-art/Netflix_EDA" target="_blank" rel="noopener">View repository ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">02 · Data Analysis Project</div>
+        <h3>Swiggy Sales Analysis</h3>
+        <div class="project-meta">3rd Year Project</div>
+        <ul>
+          <li>Built a dashboard analyzing sales data and highlighting performance trends.</li>
+          <li>Analyzed customer behaviour, product performance and regional trends for growth opportunities.</li>
+          <li>Used predictive analytics to forecast sales and support decision-making.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Jupyter Notebook</span><span>Python</span><span>Sales Analysis</span><span>Dashboarding</span>
+        </div>
+        <a class="project-link" href="https://github.com/sandeepgautam-art/Swiggy_sales_analysis2025" target="_blank" rel="noopener">View repository ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">03 · Hackathon Project</div>
+        <h3>Alumni Hub</h3>
+        <div class="project-meta">2nd Year Hackathon</div>
+        <ul>
+          <li>Real-time platform connecting students with college alumni for guidance and mentorship.</li>
+          <li>Built with the Django web framework and SQLite for data persistence.</li>
+          <li>Included per-user profile dashboards, login &amp; registration flows and more.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Python</span><span>Django</span><span>HTML/CSS/JS</span><span>SQLite</span>
+        </div>
+        <a class="project-link" href="https://github.com/sandeepgautam-art" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">04 · Freelance Project</div>
+        <h3>Prince Arts</h3>
+        <div class="project-meta">Freelance Website</div>
+        <ul>
+          <li>Designed and built a business portfolio website end-to-end for a client.</li>
+          <li>Wired up direct email and WhatsApp contact channels alongside a full project portfolio.</li>
+        </ul>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <a class="project-link" href="https://princearts.vercel.app/" target="_blank" rel="noopener">View live site ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">05 · IoT Project</div>
+        <h3>Laser Security Alarm System</h3>
+        <div class="project-meta">3rd Year Project</div>
+        <ul>
+          <li>Built a laser-based security alarm that sends real-time warning alerts via Telegram.</li>
+          <li>Designed for homes and offices to flag unauthorized entry attempts.</li>
+          <li>Programmed in C++ on Arduino IDE, connected to WiFi through an ESP32 module.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Arduino IDE</span><span>C++</span><span>ESP32</span><span>Laser &amp; Buzzer</span>
+        </div>
+        <a class="project-link" href="https://github.com/sandeepgautam-art" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">05 · Academics</span>
+      <h2 class="section-title">Education</h2>
+      <span class="section-sub">// academic record</span>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-top">
+        <div>
+          <h3>B.E. Information Technology</h3>
+          <div class="edu-meta">Saraswati College of Engineering · Mumbai University</div>
+        </div>
+        <div class="edu-meta">NAAC A+ &nbsp;·&nbsp; Autonomous &nbsp;·&nbsp; NBA 2UG</div>
+      </div>
+      <div class="sem-grid">
+        <div class="sem-cell"><div class="sem-label">SEM I</div><div class="sem-score">5.96</div></div>
+        <div class="sem-cell"><div class="sem-label">SEM II</div><div class="sem-score">6.77</div></div>
+        <div class="sem-cell"><div class="sem-label">SEM III</div><div class="sem-score">6.13</div></div>
+        <div class="sem-cell"><div class="sem-label">SEM IV</div><div class="sem-score">7.13</div></div>
+        <div class="sem-cell"><div class="sem-label">SEM V</div><div class="sem-score">6.70</div></div>
+        <div class="sem-cell"><div class="sem-label">SEM VI</div><div class="sem-score">6.77</div></div>
+        <div class="sem-cell pending"><div class="sem-label">SEM VII</div><div class="sem-score">—</div></div>
+        <div class="sem-cell pending"><div class="sem-label">SEM VIII</div><div class="sem-score">—</div></div>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-top">
+        <h3>Schooling</h3>
+      </div>
+      <div class="school-grid">
+        <div class="school-item">
+          <div class="pct">79.40%</div>
+          <div class="school-name">10th · PWS High School, Sion, Mumbai</div>
+          <div class="school-year">2020</div>
+        </div>
+        <div class="school-item">
+          <div class="pct">70.33%</div>
+          <div class="school-name">12th · Swami Vivekanand Vidyalaya, Nalasopara, Vasai</div>
+          <div class="school-year">2023</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hobby-strip">
+      <span>⚽ Football</span><span>🏏 Cricket</span><span>🏸 Badminton</span>
+      <span>🏋 Gym</span><span>🏃 Running</span><span>🎨 Painting &amp; Sketching</span><span>✈ Travelling</span>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="bg-blob b2" style="top:-100px; right:10%;"></div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Let's build<br>something with data.</h2>
+        <p>Open to Data Analyst, Java and Python development internships &amp; full-time roles.
+          I usually reply within a day.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Reach me</h4>
+        <a href="mailto:sandeep8108gautam@gmail.com">sandeep8108gautam@gmail.com</a>
+        <a href="tel:+918108236430">+91 81082 36430</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/sandeepgautam-art" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/sandeep-gautam-" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sandeep Gautam</span>
+      <span>Built with data, Java &amp; a little Python</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
